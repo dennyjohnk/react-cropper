@@ -1,0 +1,7 @@
+Upload jar: scp -i "prebid-server.pem" ../target/prebid-server.jar ec2-user@ec2-3-21-46-198.us-east-2.compute.amazonaws.com:
+
+Login to ec2:
+ssh -i "prebid-server.pem" ec2-user@ec2-3-21-46-198.us-east-2.compute.amazonaws.com
+
+Command to start prebid server:
+java -jar prebid-server.jar -Dspring.profiles.active=aws
